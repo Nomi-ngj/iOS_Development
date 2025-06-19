@@ -1,6 +1,6 @@
 # iOS Development Concepts
 
-## Swift Essentials
+## [Swift Essential](https://github.com/Nomi-ngj/iOS_Development/blob/main/Swift%20Essentials.md)
 
 * Properties
 * Control Flow (`if`, `for`, `while`, `switch`)
