@@ -122,9 +122,18 @@
 * Swift Concurrency (async/await)
 * Best Practices
 
-## Git & Source Control
+## [Git & Source Control](https://github.com/Nomi-ngj/iOS_Development/blob/main/Git%20%26%20Source%20Control.md)
 
-* commit, push, pull, merge
+* What is Git?
+* Basic Git Workflow
+* Common Git Commands
+* Branching Strategy
+    * `main` branch
+    * `develop` branch
+    * `feature` branches
+    * `task` branches
+* Working with Remotes
+* Best Practices
 
 ## CocoaPods
 
