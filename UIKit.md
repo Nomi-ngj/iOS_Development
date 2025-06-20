@@ -1,5 +1,12 @@
 ## UIKit
 
+* UIViewController Lifecycle
+* IBOutlets & Variables
+* Constraints & AutoLayout
+* UITableView & UICollectionView
+* Navigation (Push, Present, Pop, Unwind)
+* Storyboard vs Code
+
 ### UIViewController Lifecycle
 
 Understanding the lifecycle helps in placing code appropriately.
@@ -35,23 +42,30 @@ class MyViewController: UIViewController {
 
 ---
 
-### IBOutlets
+### IBOutlets & Variables
 
 IBOutlets allow you to reference storyboard UI components in code.
 
 ```swift
 class MyViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myButton: UIButton!
+    
+    var message: String = "Welcome"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        myLabel.text = "Hello from IBOutlet!"
+        myLabel.text = message
+    }
+
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        print("Button was tapped")
     }
 }
 ```
 
-* `@IBOutlet` connects the UI component in Interface Builder to code.
-* Always marked as `weak` to avoid retain cycles.
+* `@IBOutlet` connects UI from storyboard.
+* `@IBAction` connects actions (e.g., button taps).
 
 ---
 
@@ -74,19 +88,15 @@ NSLayoutConstraint.activate([
 
 ### UITableView & UICollectionView
 
-These are used to display scrollable lists and grids.
-
 **UITableView Example:**
 
 ```swift
 class MyTableViewController: UITableViewController {
-    @IBOutlet weak var tableView: UITableView!
     let items = ["Apple", "Banana", "Orange"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,13 +115,11 @@ class MyTableViewController: UITableViewController {
 
 ```swift
 class MyCollectionViewController: UICollectionViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
     let items = ["Red", "Green", "Blue"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -128,24 +136,58 @@ class MyCollectionViewController: UICollectionViewController {
 
 ---
 
+### Navigation (Push, Present, Pop, Unwind)
+
+**Push ViewController:**
+
+```swift
+let detailVC = DetailViewController()
+navigationController?.pushViewController(detailVC, animated: true)
+```
+
+**Present Modally:**
+
+```swift
+let modalVC = ModalViewController()
+present(modalVC, animated: true, completion: nil)
+```
+
+**Pop ViewController:**
+
+```swift
+navigationController?.popViewController(animated: true)
+```
+
+**Unwind Segue (Storyboard):**
+
+```swift
+@IBAction func unwindToMain(_ segue: UIStoryboardSegue) {
+    // This will be called on unwind
+}
+```
+
+---
+
 ### Storyboard vs Code
 
 **Storyboard:**
 
 * Visual interface builder.
-* Easy to prototype UI.
-* Can lead to merge conflicts in team environments.
+* Quick prototyping.
+* Can cause merge conflicts.
 
 **Code:**
 
-* Full control.
-* Easier to version control.
-* Preferred for complex, dynamic interfaces.
+* More control.
+* Cleaner version control.
+* Recommended for advanced layouts.
 
-Example in Code:
+**Code UI Example:**
 
 ```swift
 let button = UIButton(type: .system)
 button.setTitle("Click Me", for: .normal)
 view.addSubview(button)
 ```
+
+> UIKit is flexible, and you can choose storyboard, code, or a hybrid depending on your project.
