@@ -92,6 +92,7 @@ NSLayoutConstraint.activate([
 
 ```swift
 class MyTableViewController: UITableViewController {
+    @IBOutlet weak var tableView: UITableView!
     let items = ["Apple", "Banana", "Orange"]
 
     override func viewDidLoad() {
@@ -115,6 +116,7 @@ class MyTableViewController: UITableViewController {
 
 ```swift
 class MyCollectionViewController: UICollectionViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
     let items = ["Red", "Green", "Blue"]
 
     override func viewDidLoad() {
