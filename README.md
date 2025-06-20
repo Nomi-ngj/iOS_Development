@@ -35,174 +35,50 @@
   * Encapsulation
   * Abstraction
 
-## Higher Order Functions
+## [Higher Order Functions in Swift](https://github.com/Nomi-ngj/iOS_Development/blob/main/Higher%20Order%20Functions.md)
 
-### map
+* Core Functions
+    * `map(_:)`
+    * `filter(_:)`
+    * `reduce(_:_:)`
+    * `reduce(into:_:)`
+    * `compactMap(_:)`
+    * `flatMap(_:)`
+    * `forEach(_:)`
+    * `sorted(by:)`
+    * `reversed()`
+    * `joined()`
 
-```swift
-let numbers = [1, 2, 3, 4]
-let squared = numbers.map { $0 * $0 } // [1, 4, 9, 16]
-```
+* Search & Conditionals
+    * `contains(where:)`
+    * `allSatisfy(_:)`
+    * `first(where:)`
+    * `min(by:)`, `max(by:)`
+    * `prefix(while:)`
+    * `drop(while:)`
 
-### filter
+* Slicing
+    * `prefix(_:)`, `suffix(_:)`
+    * `dropFirst(_:)`, `dropLast(_:)`
+    * `split(separator:)`
 
-```swift
-let evenNumbers = numbers.filter { $0 % 2 == 0 } // [2, 4]
-```
+* Grouping & Indexing
+    * `enumerated()`
+    * `partition(by:)`
+    * `Dictionary(grouping:by:)`
+    * `Dictionary(uniqueKeysWithValues:)`
 
-### reduce
+* Utility
+    * `zip(_:_:)`
+    * `stride(from:to:by:)`
+    * `lazy`
+    * `indices.map`
 
-```swift
-let sum = numbers.reduce(0, +) // 10
-```
-
-### compactMap
-
-```swift
-let values = ["1", "two", "3"]
-let validInts = values.compactMap { Int($0) } // [1, 3]
-```
-
-### flatMap
-
-```swift
-let nested = [[1, 2], [3, 4], [5, 6]]
-let flattened = nested.flatMap { $0 } // [1, 2, 3, 4, 5, 6]
-```
-
-### forEach
-
-```swift
-numbers.forEach { print($0) }
-```
-
-### sorted
-
-```swift
-let sorted = numbers.sorted(by: >) // [4, 3, 2, 1]
-```
-
-### zip
-
-```swift
-let names = ["Alice", "Bob", "Charlie"]
-let scores = [85, 92, 78]
-let zipped = Array(zip(names, scores))
-// [("Alice", 85), ("Bob", 92), ("Charlie", 78)]
-```
-
-### first(where:)
-
-```swift
-let firstEven = numbers.first(where: { $0 % 2 == 0 }) // 2
-```
-
-### dropFirst / dropLast
-
-```swift
-let droppedFirst = numbers.dropFirst() // [2, 3, 4]
-let droppedLast = numbers.dropLast()   // [1, 2, 3]
-```
-
-### prefix / suffix
-
-```swift
-let firstTwo = numbers.prefix(2) // [1, 2]
-let lastTwo = numbers.suffix(2)  // [3, 4]
-```
-
-### group(by:) using Dictionary
-
-```swift
-let names = ["Anna", "Alex", "Brian", "Bob"]
-let grouped = Dictionary(grouping: names) { $0.first! }
-// ["A": ["Anna", "Alex"], "B": ["Brian", "Bob"]]
-```
-
-### allSatisfy
-
-```swift
-let allPositive = numbers.allSatisfy { $0 > 0 } // true
-```
-
-### contains(where:)
-
-```swift
-let hasNegative = numbers.contains(where: { $0 < 0 }) // false
-```
-
-### enumerated
-
-```swift
-for (index, value) in numbers.enumerated() {
-    print("\(index): \(value)")
-}
-```
-
-### partition
-
-```swift
-var values = [10, 20, 5, 8, 15]
-let pivot = values.partition { $0 >= 10 }
-// values: [5, 8, 20, 10, 15], pivot: 2
-```
-
-### joined
-
-```swift
-let words = [["Hello"], ["World"]]
-let flat = words.joined() // ["Hello", "World"]
-```
-
-### reduce(into:)
-
-```swift
-let result = numbers.reduce(into: []) { $0.append($1 * 2) } // [2, 4, 6, 8]
-```
-
-### reversed
-
-```swift
-let reversed = numbers.reversed() // [4, 3, 2, 1]
-```
-
-### split
-
-```swift
-let sentence = "This is a test"
-let words = sentence.split(separator: " ") // ["This", "is", "a", "test"]
-```
-
-### shuffle / shuffled
-
-```swift
-let shuffled = numbers.shuffled() // Random order
-```
-
-### min / max
-
-```swift
-let smallest = numbers.min() // 1
-let largest = numbers.max()  // 4
-```
-
-### drop(while:)
-
-```swift
-let result = numbers.drop(while: { $0 < 3 }) // [3, 4]
-```
-
-### prefix(while:) / suffix(while:) (Swift 5.1+)
-
-```swift
-let prefixResult = numbers.prefix(while: { $0 < 3 }) // [1, 2]
-```
-
-### lazy
-
-```swift
-let lazyMapped = numbers.lazy.map { $0 * 2 }
-```
+* Swift 5.7+ Additions
+    * `chunks(ofCount:)`
+    * `windows(ofCount:)`
+    * `compactMapValues(_:)`
+    * `sequence(first:next:)`
 
 ## UIKit
 
@@ -355,8 +231,6 @@ let button = UIButton(type: .system)
 button.setTitle("Click Me", for: .normal)
 view.addSubview(button)
 ```
-
-Use either or both depending on project needs.
 
 
 ## Notifications
