@@ -135,12 +135,15 @@
 * Working with Remotes
 * Best Practices
 
-## CocoaPods
+## [CocoaPods](https://github.com/Nomi-ngj/iOS_Development/blob/main/CocoaPods.md)
 
-```bash
-pod init
-pod install
-```
+- What is CocoaPods?
+- Installing CocoaPods
+- Setting Up CocoaPods in a Project
+- Adding Dependencies
+- Using Pod Commands
+- Updating and Removing Pods
+- Best Practices
 
 ## Design Patterns
 
