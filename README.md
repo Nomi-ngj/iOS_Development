@@ -109,113 +109,18 @@
 * Advanced: Type Erasure with Generics
 * Benefits
 
-## Memory Management
+## [Memory Management in Swift](https://github.com/Nomi-ngj/iOS_Development/blob/main/Memory%20Management.md)
 
-### Automatic Reference Counting (ARC)
-
-Swift uses ARC to automatically manage memory by keeping track of how many references exist to each instance.
-
-### Strong References
-
-The default reference type. Increases the reference count.
-
-```swift
-class Person {
-    var name: String
-    init(name: String) {
-        self.name = name
-    }
-}
-
-var person1: Person? = Person(name: "John")
-var person2 = person1
-person1 = nil
-// person2 still holds the object
-```
-
-### Weak References
-
-Does not increase the reference count. Becomes `nil` automatically when the referenced object is deallocated.
-
-```swift
-class Room {
-    weak var occupant: Person?
-}
-```
-
-### Unowned References
-
-Does not increase the reference count but assumes the object will always exist when accessed. Crashes if accessed after deallocation.
-
-```swift
-class Customer {
-    var name: String
-    var card: CreditCard?
-    init(name: String) { self.name = name }
-}
-
-class CreditCard {
-    unowned let customer: Customer
-    init(customer: Customer) {
-        self.customer = customer
-    }
-}
-```
-
-### Retain Cycles
-
-Occurs when two instances hold strong references to each other.
-
-```swift
-class A {
-    var b: B?
-}
-
-class B {
-    var a: A?
-}
-```
-
-**Fix with weak/unowned references**:
-
-```swift
-class B {
-    weak var a: A?
-}
-```
-
-### Closures and Retain Cycles
-
-Closures capture variables strongly by default.
-
-```swift
-class ViewModel {
-    var name = "Swift"
-
-    lazy var printName: () -> Void = {
-        [weak self] in
-        print(self?.name ?? "no name")
-    }
-}
-```
-
-Use `[weak self]` or `[unowned self]` to prevent retain cycles.
-
-## Swift Concurrency (async/await)
-
-```swift
-func fetchUserData() async throws -> User { ... }
-```
-
-## Error Handling
-
-```swift
-do {
-    try someThrowingFunction()
-} catch {
-    print(error)
-}
-```
+* What is Memory Management?
+* Automatic Reference Counting (ARC)
+* Strong References
+* Retain Cycles
+* Weak and Unowned References
+* Closures and Capture Lists
+* Memory Debugging
+* Combine and Retain Cycles
+* Swift Concurrency (async/await)
+* Best Practices
 
 ## Git & Source Control
 
