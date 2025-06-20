@@ -98,15 +98,16 @@
 * Badge Updates
 * NotificationCenter (In-App Communication)
 
-## Generics
+## [Generics](https://github.com/Nomi-ngj/iOS_Development/blob/main/Generics.md)
 
-```swift
-func swapValues<T>(_ a: inout T, _ b: inout T) {
-    let temp = a
-    a = b
-    b = temp
-}
-```
+* What are Generics?
+* Basic Generic Function
+* Generic Types (Structs, Classes, Enums)
+* Generic Constraints
+* Associated Types in Protocols
+* Advanced: Generic Protocol Extensions
+* Advanced: Type Erasure with Generics
+* Benefits
 
 ## Memory Management
 
