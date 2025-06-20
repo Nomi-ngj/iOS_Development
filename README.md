@@ -89,11 +89,14 @@
 * Navigation (Push, Present, Pop, Unwind)
 * Storyboard vs Code
 
-## Notifications
+## [Notification](https://github.com/Nomi-ngj/iOS_Development/blob/main/Notification.md)
 
-```swift
-NotificationCenter.default.addObserver(self, selector: #selector(handleUpdate), name: .didUpdateData, object: nil)
-```
+* Local Notifications
+* Local Notification with Actions & Categories
+* Push Notifications
+* Silent Push Notifications
+* Badge Updates
+* NotificationCenter (In-App Communication)
 
 ## Generics
 
