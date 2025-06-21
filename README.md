@@ -170,12 +170,13 @@
   - Strategy
 - Best Practices
 
-## Architecture Patterns
+## [Architecture Patterns](https://github.com/Nomi-ngj/iOS_Development/blob/main/Architecture%20Patterns.md)
 
-* MVC
-* MVVM
+* MVC (Model-View-Controller)
+* MVVM (Model-View-ViewModel)
 * VIPER
 * Coordinator
+* [Clean Architecture](https://github.com/Nomi-ngj/iOS_Development/blob/main/Clean%20Architecture.md)
 
 ## Networking & API
 
