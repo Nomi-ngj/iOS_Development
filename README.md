@@ -145,71 +145,30 @@
 - Updating and Removing Pods
 - Best Practices
 
-## Design Patterns
+## [Swift Package Manager (SPM)](https://github.com/Nomi-ngj/iOS_Development/blob/main/Swift%20Package%20Manager%20(SPM).md)
 
-* MVC
-* MVVM
+- What is Swift Package Manager?
+- Benefits of Using SPM
+- Creating a Swift Package
+- Adding Dependencies
+- Using Packages in Xcode
+- Common Commands
+- Best Practices
 
-## CoreData
 
-Apple’s built-in object graph and persistence framework.
+## [Design Patterns](https://github.com/Nomi-ngj/iOS_Development/blob/main/Design%20Patterns.md)
 
-```swift
-let container = NSPersistentContainer(name: "Model")
-container.loadPersistentStores { _, error in
-  if let err = error { fatalError(err.localizedDescription) }
-}
-let context = container.viewContext
-
-let person = PersonEntity(context: context)
-person.name = "John"
-try context.save()
-```
-
-## Combine
-
-Apple’s reactive programming framework.
-
-```swift
-Just("Hello")
-  .map { $0.uppercased() }
-  .sink { print($0) }  // Prints "HELLO"
-```
-
-## Swift Package Manager (SPM)
-
-```swift
-let package = Package(
-  name: "MyLibrary",
-  products: [.library(name: "MyLibrary", targets: ["Core", "UI"])],
-  targets: [...]
-)
-```
-
-## Unit Testing & UI Testing
-
-```swift
-func testExample() {
-  let sum = add(2, 3)
-  XCTAssertEqual(sum, 5)
-}
-```
-
-```swift
-let app = XCUIApplication()
-app.launch()
-app.buttons["Login"].tap()
-XCTAssert(app.staticTexts["Welcome"].exists)
-```
-
-## Localization & Accessibility
-
-```swift
-NSLocalizedString("welcome_message", comment: "")
-
-button.accessibilityLabel = "Play"
-button.accessibilityHint = "Starts the game"
-```
+- What Are Design Patterns?
+- Creational Patterns
+  - Singleton
+  - Factory
+- Structural Patterns
+  - Adapter
+  - Decorator
+- Behavioral Patterns
+  - Observer
+  - Strategy
+- Best Practices
 
 ## Architecture Patterns
 
@@ -245,6 +204,31 @@ Task {
 }
 ```
 
+## Unit Testing & UI Testing
+
+```swift
+func testExample() {
+  let sum = add(2, 3)
+  XCTAssertEqual(sum, 5)
+}
+```
+
+```swift
+let app = XCUIApplication()
+app.launch()
+app.buttons["Login"].tap()
+XCTAssert(app.staticTexts["Welcome"].exists)
+```
+
+## Localization & Accessibility
+
+```swift
+NSLocalizedString("welcome_message", comment: "")
+
+button.accessibilityLabel = "Play"
+button.accessibilityHint = "Starts the game"
+```
+
 ## Persistence & Storage
 
 * UserDefaults
@@ -252,11 +236,6 @@ Task {
 * Keychain
 * CoreData
 * Realm, SQLite
-
-## Push Notifications
-
-* UNUserNotificationCenter
-* APNs integration
 
 ## MapKit & Location
 
