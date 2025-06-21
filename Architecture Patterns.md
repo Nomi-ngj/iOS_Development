@@ -1,10 +1,10 @@
-# 🏗️ iOS Architecture Patterns
+# Architecture Patterns
 
 * MVC (Model-View-Controller)
 * MVVM (Model-View-ViewModel)
 * VIPER
 * Coordinator
-* Clean Architecture
+* [Clean Architecture](https://github.com/Nomi-ngj/iOS_Development/blob/main/Clean%20Architecture.md)
 
 ## MVC (Model-View-Controller)
 
