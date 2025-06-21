@@ -98,6 +98,25 @@
 * Badge Updates
 * NotificationCenter (In-App Communication)
 
+## [Persistence & Storage](https://github.com/Nomi-ngj/iOS_Development/blob/main/Persistence%20%26%20Storage.md)
+
+* UserDefaults
+* FileManager
+* Keychain
+* CoreData
+* Realm, SQLite
+
+## [MapKit & Location](https://github.com/Nomi-ngj/iOS_Development/blob/main/MapKit%20%26%20Location.md)
+
+* Introduction to CoreLocation & MapKit
+* Requesting Location Permissions
+* Checking Location Services
+* Getting the User’s Location
+* Displaying Location on Map
+* Customizing Annotations
+* Handling Location Updates
+* Best Practices
+
 ## [Generics](https://github.com/Nomi-ngj/iOS_Development/blob/main/Generics.md)
 
 * What are Generics?
@@ -122,18 +141,18 @@
 * Swift Concurrency (async/await)
 * Best Practices
 
-## [Git & Source Control](https://github.com/Nomi-ngj/iOS_Development/blob/main/Git%20%26%20Source%20Control.md)
+## [Networking & API](https://github.com/Nomi-ngj/iOS_Development/blob/main/Networking.md)
 
-* What is Git?
-* Basic Git Workflow
-* Common Git Commands
-* Branching Strategy
-    * `main` branch
-    * `develop` branch
-    * `feature` branches
-    * `task` branches
-* Working with Remotes
-* Best Practices
+- Introduction
+- URLSession
+- URLRequest
+- Codable and JSONDecoder
+- Using Completion Handlers
+- Using async/await (Swift Concurrency)
+- Alamofire (Third-party)
+- Combine Framework
+- Error Handling
+- Best Practices
 
 ## [CocoaPods](https://github.com/Nomi-ngj/iOS_Development/blob/main/CocoaPods.md)
 
@@ -154,7 +173,6 @@
 - Using Packages in Xcode
 - Common Commands
 - Best Practices
-
 
 ## [Design Patterns](https://github.com/Nomi-ngj/iOS_Development/blob/main/Design%20Patterns.md)
 
@@ -178,23 +196,34 @@
 * Coordinator
 * [Clean Architecture](https://github.com/Nomi-ngj/iOS_Development/blob/main/Clean%20Architecture.md)
 
-## [Networking & API](https://github.com/Nomi-ngj/iOS_Development/blob/main/Networking.md)
-
-- Introduction
-- URLSession
-- URLRequest
-- Codable and JSONDecoder
-- Using Completion Handlers
-- Using async/await (Swift Concurrency)
-- Alamofire (Third-party)
-- Combine Framework
-- Error Handling
-- Best Practices
-
 ## [Architecture Tools](https://github.com/Nomi-ngj/iOS_Development/blob/main/Architecture%20Tools.md)
 
 * Dependency Injection
 * Protocols for Testability
+
+## [Git & Source Control](https://github.com/Nomi-ngj/iOS_Development/blob/main/Git%20%26%20Source%20Control.md)
+
+* What is Git?
+* Basic Git Workflow
+* Common Git Commands
+* Branching Strategy
+    * `main` branch
+    * `develop` branch
+    * `feature` branches
+    * `task` branches
+* Working with Remotes
+* Best Practices
+
+## [Unit Testing & UI Testing](https://github.com/Nomi-ngj/iOS_Development/blob/main/Unit%20Testing%20%26%20UI%20Testing.md)
+
+* What is Unit Testing?
+* What is UI Testing?
+* XCTest Framework
+* Writing Unit Tests
+* Writing UI Tests
+* Mocking & Dependency Injection
+* Code Coverage
+* Best Practices
 
 ## [Localization & Accessibility](https://github.com/Nomi-ngj/iOS_Development/blob/main/Localization%20%26%20Accessibility.md)
 
@@ -205,25 +234,6 @@
 * What is Accessibility?
 * Adding Accessibility Support
 * VoiceOver and Dynamic Type
-
-## [Persistence & Storage](https://github.com/Nomi-ngj/iOS_Development/blob/main/Persistence%20%26%20Storage.md)
-
-* UserDefaults
-* FileManager
-* Keychain
-* CoreData
-* Realm, SQLite
-
-## [MapKit & Location](https://github.com/Nomi-ngj/iOS_Development/blob/main/MapKit%20%26%20Location.md)
-
-* Introduction to CoreLocation & MapKit
-* Requesting Location Permissions
-* Checking Location Services
-* Getting the User’s Location
-* Displaying Location on Map
-* Customizing Annotations
-* Handling Location Updates
-* Best Practices
 
 ## [SwiftUI](https://github.com/Nomi-ngj/iOS_Development/blob/main/SwiftUI.md)
 
@@ -266,17 +276,6 @@
 * Threading with Schedulers
 * RxCocoa Integration
 * MVVM with RxSwift
-* Best Practices
-
-## [Unit Testing & UI Testing](https://github.com/Nomi-ngj/iOS_Development/blob/main/Unit%20Testing%20%26%20UI%20Testing.md)
-
-* What is Unit Testing?
-* What is UI Testing?
-* XCTest Framework
-* Writing Unit Tests
-* Writing UI Tests
-* Mocking & Dependency Injection
-* Code Coverage
 * Best Practices
 
 ## [Continuous Integration / CI-CD](https://github.com/Nomi-ngj/iOS_Development/blob/main/Continuous%20Integration%20/CI-CD.md)
