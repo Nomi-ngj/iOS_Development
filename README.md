@@ -1,4 +1,10 @@
-# iOS Development Concepts
+# iOS Development
+
+## [OOP Concepts](https://github.com/Nomi-ngj/iOS_Development/blob/main/OOP%20Concepts.md)
+  * Inheritance
+  * Polymorphism
+  * Encapsulation
+  * Abstraction
 
 ## [Swift Essential](https://github.com/Nomi-ngj/iOS_Development/blob/main/Swift%20Essentials.md)
 
@@ -28,12 +34,6 @@
 
   * `@escaping` & `@nonescaping`
 * Protocols & Delegates
-
-## [OOP Concepts](https://github.com/Nomi-ngj/iOS_Development/blob/main/OOP%20Concepts.md)
-  * Inheritance
-  * Polymorphism
-  * Encapsulation
-  * Abstraction
 
 ## [Higher Order Functions in Swift](https://github.com/Nomi-ngj/iOS_Development/blob/main/Higher%20Order%20Functions.md)
 
@@ -178,59 +178,35 @@
 * Coordinator
 * [Clean Architecture](https://github.com/Nomi-ngj/iOS_Development/blob/main/Clean%20Architecture.md)
 
-## Networking & API
+## [Networking & API](https://github.com/Nomi-ngj/iOS_Development/blob/main/Networking.md)
 
-```swift
-URLSession.shared.dataTask(with: url) { data, _, error in
-  ...
-}
-```
+- Introduction
+- URLSession
+- URLRequest
+- Codable and JSONDecoder
+- Using Completion Handlers
+- Using async/await (Swift Concurrency)
+- Alamofire (Third-party)
+- Combine Framework
+- Error Handling
+- Best Practices
 
-* Alamofire, Moya
-* Codable
-
-## Architecture Tools
+## [Architecture Tools](https://github.com/Nomi-ngj/iOS_Development/blob/main/Architecture%20Tools.md)
 
 * Dependency Injection
 * Protocols for Testability
 
-## Concurrency & Threading
+## [Localization & Accessibility](https://github.com/Nomi-ngj/iOS_Development/blob/main/Localization%20%26%20Accessibility.md)
 
-```swift
-DispatchQueue.global().async { /* background */ }
-DispatchQueue.main.async { /* UI update */ }
+* What is Localization?
+* Adding Localized Strings
+* Using String Catalogs
+* Switching Languages for Testing
+* What is Accessibility?
+* Adding Accessibility Support
+* VoiceOver and Dynamic Type
 
-Task {
-  let data = try await fetchData()
-}
-```
-
-## Unit Testing & UI Testing
-
-```swift
-func testExample() {
-  let sum = add(2, 3)
-  XCTAssertEqual(sum, 5)
-}
-```
-
-```swift
-let app = XCUIApplication()
-app.launch()
-app.buttons["Login"].tap()
-XCTAssert(app.staticTexts["Welcome"].exists)
-```
-
-## Localization & Accessibility
-
-```swift
-NSLocalizedString("welcome_message", comment: "")
-
-button.accessibilityLabel = "Play"
-button.accessibilityHint = "Starts the game"
-```
-
-## Persistence & Storage
+## [Persistence & Storage](https://github.com/Nomi-ngj/iOS_Development/blob/main/Persistence%20%26%20Storage.md)
 
 * UserDefaults
 * FileManager
@@ -238,38 +214,80 @@ button.accessibilityHint = "Starts the game"
 * CoreData
 * Realm, SQLite
 
-## MapKit & Location
+## [MapKit & Location](https://github.com/Nomi-ngj/iOS_Development/blob/main/MapKit%20%26%20Location.md)
 
-```swift
-let map = MKMapView()
-map.delegate = self
-map.addAnnotation(pin)
-```
+* Introduction to CoreLocation & MapKit
+* Requesting Location Permissions
+* Checking Location Services
+* Getting the User’s Location
+* Displaying Location on Map
+* Customizing Annotations
+* Handling Location Updates
+* Best Practices
 
-## SwiftUI
+## [SwiftUI](https://github.com/Nomi-ngj/iOS_Development/blob/main/SwiftUI.md)
 
-* `@State`, `@Binding`, `@ObservedObject`
+* What is SwiftUI?
+* SwiftUI vs UIKit
+* Basic Components
+* Layout System
+* State Management
 * View Lifecycle
-* Live previews
+* SwiftUI Macros (Swift 5.9 / Swift 6+)
+* Navigation
+* Animations
+* SwiftUI and Combine
+* Previews
+* Integration with UIKit
+* Best Practices
 
-## Reactive Programming (RxSwift)
+## [Reactive Programming (RxSwift)](https://github.com/Nomi-ngj/iOS_Development/blob/main/Reactive%20Programming%20(RxSwift).md)
 
-```swift
-let disposeBag = DisposeBag()
-Observable.just("hello")
-  .subscribe(onNext: { print($0) })
-  .disposed(by: disposeBag)
-```
+* What is Reactive Programming?
+* What is RxSwift?
+* Core Concepts
+    * Observables
+    * Observers
+    * Subjects
+    * Disposables
+    * Schedulers
+* Creating Observables
+* Subscribing to Observables
+* Disposing Subscriptions
+* Using Subjects
+    * PublishSubject
+    * BehaviorSubject
+    * ReplaySubject
+    * AsyncSubject
+* Operators
+    * map, flatMap, filter, debounce, merge, combineLatest, etc.
+* Chaining Operators
+* Error Handling
+* Threading with Schedulers
+* RxCocoa Integration
+* MVVM with RxSwift
+* Best Practices
 
-## Gesture Handling
+## [Unit Testing & UI Testing](https://github.com/Nomi-ngj/iOS_Development/blob/main/Unit%20Testing%20%26%20UI%20Testing.md)
 
-```swift
-let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
-view.addGestureRecognizer(tap)
-```
+* What is Unit Testing?
+* What is UI Testing?
+* XCTest Framework
+* Writing Unit Tests
+* Writing UI Tests
+* Mocking & Dependency Injection
+* Code Coverage
+* Best Practices
 
-## Continuous Integration / CI-CD
+## [Continuous Integration / CI-CD](https://github.com/Nomi-ngj/iOS_Development/blob/main/Continuous%20Integration%20/CI-CD.md)
 
-* Fastlane
-* Bitrise, CircleCI, GitHub Actions
-* TestFlight
+- What is Continuous Integration / Delivery?
+- Benefits of CI/CD in iOS
+- Common CI/CD Tools
+  - Fastlane
+  - Bitrise
+  - CircleCI
+  - GitHub Actions
+- Deployment
+  - TestFlight
+- Best Practices
